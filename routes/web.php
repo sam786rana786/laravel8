@@ -34,6 +34,8 @@ Route::get('/about', function () {
 });
 
 Route::get('/asdf-asdf', [ContactController::class, 'index'])->name('contact');
+//Logout Route
+Route::get('/logout', [CategoryController::class, 'Logout'])->name('logout');
 
 // Category Controller
 Route::get('/category/all', [CategoryController::class, 'AllCat'])->name('all.category');
@@ -57,5 +59,5 @@ Route::post('/multi/add', [BrandController::class, 'AddImage'])->name('store.ima
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     $users = User::all();
-    return view('dashboard', compact('users'));
+    return view('admin.index', compact('users'));
 })->name('dashboard');

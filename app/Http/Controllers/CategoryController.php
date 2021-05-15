@@ -85,4 +85,8 @@ class CategoryController extends Controller
         $delete = Category::onlyTrashed()->find($id)->forceDelete();
         return Redirect()->back()->with('success', 'Category Deleted Successfully');
     }
+    public function Logout() {
+        Auth::logout();
+        return Redirect()->route('login')->with('success', 'Successfully Logged Out');
+    }
 }
