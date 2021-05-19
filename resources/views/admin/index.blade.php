@@ -223,11 +223,9 @@
                 <a href="#" class="btn-link py-3 text-uppercase">View Report</a>
             </div>
         </div>
-
     </div>
 
     <div class="col-xl-4 col-12">
-
         <!-- Notification Table -->
         <div class="card card-default">
             <div class="card-header justify-content-between mb-1">

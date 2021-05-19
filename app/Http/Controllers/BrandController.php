@@ -21,7 +21,7 @@ class BrandController extends Controller
     }
 
     public function AddBrand(Request $request) {
-        $validateData = $request->validate([
+        $this->validate($request, [
             'brand_name' => 'required|unique:brands|min:4',
             'brand_image' => 'required|mimes:jpg,jpeg,png',
         ],
@@ -70,7 +70,7 @@ class BrandController extends Controller
     }
 
     public function Update(Request $request, $id) {
-        $validateData = $request->validate([
+        $this->validate($request, [
             'brand_name' => 'required|min:4',
         ],
         [
@@ -126,7 +126,7 @@ class BrandController extends Controller
         $image = $request->file('image');
         foreach($image as $m_image) {
             $name_gen = hexdec(uniqid()).'.'.$m_image->getClientOriginalExtension();
-            Image::make($m_image)->resize(300,200)->save('image/multi/'. $name_gen);
+            Image::make($m_image)->resize(1302,873)->save('image/multi/'. $name_gen);
             $last_image = 'image/multi/'. $name_gen;
             Multipic::insert([
                 'image' => $last_image,

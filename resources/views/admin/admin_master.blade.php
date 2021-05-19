@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
-@include('admin.header')
+@include('admin.body.header')
 
 <body class="header-fixed sidebar-fixed sidebar-dark header-light" id="body">
     <script>
@@ -16,7 +16,7 @@
         <!-- ====================================
           ——— LEFT SIDEBAR WITH OUT FOOTER
         ===================================== -->
-        @include('admin.left_sidebar')
+        @include('admin.body.left_sidebar')
 
 
         <!-- ====================================
@@ -25,7 +25,7 @@
         <div class="page-wrapper">
 
             <!-- Header -->
-            @include('admin.topbar')
+            @include('admin.body.topbar')
 
 
             <!-- ====================================
@@ -39,7 +39,7 @@
 
 
             <!-- Footer -->
-            @include('admin.footer')
+            @include('admin.body.footer')
 
         </div> <!-- End Page Wrapper -->
     </div> <!-- End Wrapper -->
@@ -53,7 +53,7 @@
     </script> -->
 
     <!-- Javascript -->
-    @include('admin.scripts')
+    @include('admin.body.scripts')
 </body>
 
 </html>
